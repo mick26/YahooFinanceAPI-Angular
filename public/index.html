@@ -1,0 +1,52 @@
+<!-- 
+Gets Stock Price from Yahoo Finance API
+
+Ref.
+https://developer.yahoo.com/yql
+https://developer.yahoo.com/yql/console/
+https://www.datatables.org/
+
+http://jsfiddle.net/vlad_bezden/RU8Jq/
+http://stackoverflow.com/questions/17245498/get-stock-quotes-from-yahoo-finance-in-json-format-using-a-javascript
+http://thiscouldbebetter.wordpress.com/2014/06/06/a-stock-ticker-in-javascript-using-the-yahoo-finance-api/
+ -->
+
+<!DOCTYPE html>
+
+<html lang='en' ng-app='app'>
+
+<head>
+	<meta charset ="utf-8">
+	<title>Yahoo Finance API</title>
+	<!-- CSS -->
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+</head>
+
+<body>
+
+	<form id="form1"  method="post" ng-controller="StockCtrl">
+		<div class="form-group">
+			<label>Ticker Symbol</label>
+			<input type="text" placeholder="Enter Symbol" class="form-control" name="symbol" ng-model="symbol" />
+		</div>
+
+		<div>
+			<button class="btn btn-primary" ng-click="getData()">Get Price</button>
+		</div>
+			<br/>
+	       	{{result.Name}} <br/>			
+	       	{{result.Exchange}} <br/>
+	       	{{result.MarketCap}} <br/>
+		    {{result.LastPrice}} <br/>
+	        {{result.PercentChange}} <br/>
+	        {{result.YearRange}} <br/>
+ 	</form>
+
+ 	<!-- JS -->
+ 	<!-- // <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script> -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="js/controllers/controllers.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
