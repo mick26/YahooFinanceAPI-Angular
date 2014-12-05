@@ -14,8 +14,15 @@ The App uses the [Yahoo Query Language (YQL)](https://developer.yahoo.com/yql) w
 - Enter a valid stock ticker symbol
 
 
+## Screen Shot
+
+<div align="center">
+	<img width="60%" src="screen-shot/stock-data.png" alt="Stock Data" title="Stock Data"</img>
+</div>
+
 
 <hr>
+
 
 Michael Cullen 2014
 
